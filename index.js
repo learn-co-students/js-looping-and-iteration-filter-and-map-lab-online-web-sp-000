@@ -1,8 +1,7 @@
-// Code your solution here:
+
 function driversWithRevenueOver(array, num) {
    const over =  array.filter(arr => arr.revenue > num);
     return over;
-
 };
 
 function driverNamesWithRevenueOver(array, num){
@@ -20,5 +19,5 @@ function exactMatch(array, obj) {
 
 function exactMatchToList(array, obj) {
     return exactMatch(array, obj).map(attr => attr.name);
-}
+};
 
