@@ -1,11 +1,5 @@
 function driversWithRevenueOver(drivers, revenue) {
-  const driverArr = [];
-  drivers.filter(driver => {
-    if (driver.revenue > revenue) {
-      driverArr.push(driver)
-    }
-  });
-  return driverArr
+  return drivers.filter(driver => driver.revenue > revenue)
 }
 
 function driverNamesWithRevenueOver(drivers, revenue) {
@@ -14,16 +8,10 @@ function driverNamesWithRevenueOver(drivers, revenue) {
 }
 
 function exactMatch(drivers, matchItem) {
-  const driverArr = [];
   const itemKey = Object.keys(matchItem)[0];
   const itemValue = Object.values(matchItem)[0];
 
-  drivers.filter(driver => {
-    if (driver[itemKey] === itemValue) {
-      driverArr.push(driver)
-    }
-  });
-  return driverArr
+  return drivers.filter(driver => driver[itemKey] === itemValue)
 }
 
 function exactMatchToList(drivers, matchItem) {
